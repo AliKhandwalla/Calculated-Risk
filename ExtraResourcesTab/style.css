@@ -1,0 +1,77 @@
+:root {
+    --lightbrown: #F5E9D3;
+    --coffee: #FFCE99;
+    --caramel: #d8ae7e;
+
+    --off-white: #fff9ef;
+    --espresso: #3d3028;
+    --cocoa: #6b5142;
+}
+
+
+/* Whole page */
+body {
+    margin: 30px;
+
+    /* Manrope for normal text */
+    font-family: "Manrope", sans-serif;
+
+    background-color: var(--lightbrown);
+    color: var(--espresso);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Plus Jakarta Sans", "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr.dash {
+  border: none;
+  border-top: 4px dashed #654321; /* Increased to 4px and changed to a rich brown */
+  width: 80%;
+  margin: 40px auto;
+  opacity: 1; /* Removed opacity so the brown stays rich and solid */
+}
+
+
+/* Top navigation */
+.topnav {
+    background-color: var(--caramel);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Navigation links */
+.topnav a {
+    color: var(--espresso);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* Hover */
+.topnav a:hover {
+    background-color: var(--coffee);
+    color: var(--espresso);
+}
+
+
+/* Current page */
+.topnav a.active {
+    background-color: var(--cocoa);
+    color: var(--off-white);
+}
