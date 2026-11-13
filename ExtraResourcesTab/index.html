@@ -7,29 +7,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="topnav">
-            <a href="../GamePage/index.html">Game</a>
-            <a class="active" href="index.html">Extra Resources</a>
+    <nav class="navbar">
+        <div class="nav-title">Extra Resources</div>
+        <ul class="nav-links">
+            <li><a href="../GameTab/index.html">Game</a></li>
+            <li><a href="../InstructionsTab/index.html">Instructions</a></li>
+            <li><a class="active" href="index.html">Extra Resources</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="text-box">
+        <p>Welcome to the Extra Resources page! This page will help you find additional materials and information related to Unit 2 of AP Statistics.</p>
     </div>
-    <h1>Extra Resources</h1>
-    <hr class="dash">
-    <p> Welcome to the Extra Resources page! This page will help you find additional materials and information related to Unit 2 of AP Statistics.</p>
-    <h2>Helpful Videos:</h2>
-    <ul>
-        <li><a href="https://www.youtube.com/watch?v=XqbpuK23nVg" target="_blank">AP Statistics Unit 2 Review - Michael Porinchak</a></li>
-        <li><a href="https://www.youtube.com/watch?v=YPuIjHqvY0o" target="_blank">Normal Distributions - Michael Porinchak</a></li>
-        <li><a href="https://www.youtube.com/watch?v=94AmzeR9n2w" target="_blank">Multiplication & Addition Rule - The Organic Chemistry Tutor</a></li>
-    </ul>
-    <h2> Additional Practice Problems:</h2>
-    <ul>
-        <li><a href="https://www.khanacademy.org/math/statistics-probability/probability-library" target="_blank">Khan Academy: Probability</a></li>
-        <li><a href="https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library" target="_blank">Khan Academy: Random Variables</a></li>
-        <li><a href="https://mrshetheringtonmath.weebly.com/uploads/7/5/1/6/7516075/review_4t_-_probability.pdf" target="_blank">Review Worksheet: Probability</a></li>
-    </ul>
+
+    <!-- Wrap both .box divs in .box-grid -->
+    <div class="box-grid">
+        <div class="box">
+            <h2>Helpful Videos:</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=XqbpuK23nVg" target="_blank">AP Statistics Unit 2 Review - Michael Porinchak</a></li>
+                <li><a href="https://www.youtube.com/watch?v=YPuIjHqvY0o" target="_blank">Normal Distributions - Michael Porinchak</a></li>
+                <li><a href="https://www.youtube.com/watch?v=94AmzeR9n2w" target="_blank">Multiplication & Addition Rule - The Organic Chemistry Tutor</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Additional Practice Problems:</h2>
+            <ul>
+                <li><a href="https://www.khanacademy.org/math/statistics-probability/probability-library" target="_blank">Khan Academy: Probability</a></li>
+                <li><a href="https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library" target="_blank">Khan Academy: Random Variables</a></li>
+                <li><a href="https://mrshetheringtonmath.weebly.com/uploads/7/5/1/6/7516075/review_4t_-_probability.pdf" target="_blank">Review Worksheet: Probability</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

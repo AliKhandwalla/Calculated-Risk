@@ -1,0 +1,415 @@
+
+:root {
+    /* Backgrounds */
+    --bg-primary: #111827;
+    --bg-secondary: #1C2A3D;
+    --bg-navbar: #263448;
+    --bg-card: #293C53;
+    --bg-input: #2A3C52;
+
+    /* Game Table */
+    --table-green: #205244;
+
+    /* Accents */
+    --accent-primary: #31766E;
+    --accent-light: #8DD4C0;
+
+    /* Typography */
+    --text-primary: #F7F5ED;
+    --text-secondary: #D1DBE9;
+    --text-muted: #9DB2C8;
+
+    /* Borders */
+    --border-primary: #53667B;
+
+    /* Playing Cards */
+    --playing-card: #F7F5ED;
+    --playing-card-text: #243447;
+}
+
+/* Whole Page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+h1, h2, h3 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-navbar);
+    border-radius: 12px;
+}
+
+.nav-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-light);
+}
+
+/* Main Content */
+main {
+    margin-top: 20px;
+}
+
+/* Game Status */
+.game-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--bg-secondary);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.game-status h2 {
+    margin: 0 0 8px 0;
+}
+
+.game-status p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.round-info {
+    text-align: right;
+}
+
+.round-info p:first-child {
+    color: var(--accent-light);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Game Area */
+.game-area {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+/* Opponent Boxes */
+.opponents {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.opponent {
+    background-color: var(--bg-card);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.opponent h3 {
+    color: var(--accent-light);
+    margin: 0 0 10px;
+}
+
+.opponent p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin: 5px 0;
+}
+
+/* Playing Table */
+.game-table {
+    background-color: var(--table-green);
+    border-radius: 16px;
+    min-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.game-table h3 {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.played-cards {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.card {
+    width: 50px;
+    height: 75px;
+    flex-shrink: 0;
+
+    background-color: var(--playing-card);
+    color: var(--playing-card-text);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 8px;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Empty Card Slot */
+.empty-card {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px dashed var(--accent-light);
+}
+
+/* Player's Hand */
+.player-area {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.player-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.player-heading h3,
+.player-heading p {
+    margin: 0;
+}
+
+.player-heading p {
+    color: var(--text-muted);
+}
+
+/* Player Cards */
+.player-cards {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 0 18px;
+}
+
+.player-cards .card {
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.player-cards .card:hover {
+    transform: translateY(-8px);
+    background-color: #DDECE4;
+}
+
+/* Probability Panel */
+.probability-panel {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.probability-panel h2 {
+    color: var(--accent-light);
+    margin: 0;
+}
+
+.question-label {
+    color: var(--accent-light);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.question {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Known Information */
+.information-box {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.information-box h3 {
+    color: var(--accent-light);
+    font-size: 0.95rem;
+    margin-top: 0;
+}
+
+.information-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.information-box li {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* Answer Input */
+.answer-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-area label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.answer-area input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+
+    padding: 14px;
+    color: var(--text-primary);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.answer-area input:focus {
+    outline: 2px solid var(--accent-light);
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: var(--accent-primary);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #40968A;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .game-status {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .round-info {
+        text-align: left;
+    }
+
+    .opponents {
+        gap: 6px;
+    }
+
+    .opponent {
+        padding: 10px 5px;
+    }
+
+    .game-area,
+    .probability-panel {
+        padding: 15px;
+    }
+
+    .played-cards {
+        gap: 6px;
+    }
+
+    .played-cards .card {
+        width: 43px;
+        height: 65px;
+    }
+}

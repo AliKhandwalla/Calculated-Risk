@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculated Risk - Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-title">Calculated Risk</div>
+
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">Game</a></li>
+            <li><a href="../InstructionsTab/index.html">Instructions</a></li>
+            <li><a href="../ExtraResourceTab/index.html">Extra Resources</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Game Status -->
+        <section class="game-status">
+            <div>
+                <h2>Game Dashboard</h2>
+                <p>Use probability to outsmart your opponents.</p>
+            </div>
+
+            <div class="round-info">
+                <p>Round 1 / 13</p>
+                <p>Your Score: 0</p>
+            </div>
+        </section>
+
+        <!-- Main Dashboard -->
+        <div class="dashboard">
+
+            <!-- Left Column -->
+            <section class="game-area">
+
+                <!-- Computer Players -->
+                <div class="opponents">
+                    <div class="opponent">
+                        <h3>Bot 1</h3>
+                        <p>13 Cards</p>
+                        <p>Score: 0</p>
+                    </div>
+
+                    <div class="opponent">
+                        <h3>Bot 2</h3>
+                        <p>13 Cards</p>
+                        <p>Score: 0</p>
+                    </div>
+
+                    <div class="opponent">
+                        <h3>Bot 3</h3>
+                        <p>13 Cards</p>
+                        <p>Score: 0</p>
+                    </div>
+                </div>
+
+                <!-- Playing Table -->
+                <div class="game-table">
+                    <h3>Current Trick</h3>
+
+                    <div class="played-cards">
+                        <div class="card">12</div>
+                        <div class="card">27</div>
+                        <div class="card">41</div>
+                        <div class="card empty-card">?</div>
+                    </div>
+                </div>
+
+                <!-- Player's Cards -->
+                <div class="player-area">
+                    <div class="player-heading">
+                        <h3>Your Hand</h3>
+                        <p>13 Cards</p>
+                    </div>
+
+                    <div class="player-cards">
+                        <button class="card">2</button>
+                        <button class="card">6</button>
+                        <button class="card">9</button>
+                        <button class="card">13</button>
+                        <button class="card">17</button>
+                        <button class="card">20</button>
+                        <button class="card">25</button>
+                        <button class="card">29</button>
+                        <button class="card">33</button>
+                        <button class="card">36</button>
+                        <button class="card">40</button>
+                        <button class="card">45</button>
+                        <button class="card">52</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Probability Lab -->
+            <aside class="probability-panel">
+                <h2>Probability Lab</h2>
+
+                <p class="question-label">Question 1</p>
+
+                <p class="question">
+                    What is the probability that Bot 2
+                    holds card 35?
+                </p>
+
+                <!-- Information Box -->
+                <div class="information-box">
+                    <h3>Known Information</h3>
+
+                    <ul>
+                        <li>Cards in your hand: 13</li>
+                        <li>Cards already played: 3</li>
+                        <li>Cards in Bot 2's hand: 12</li>
+                    </ul>
+                </div>
+
+                <!-- Answer Area -->
+                <div class="answer-area">
+                    <label for="probability-answer">
+                        Your Answer
+                    </label>
+
+                    <input
+                        type="text"
+                        id="probability-answer"
+                        placeholder="Enter probability..."
+                    >
+                </div>
+
+                <button class="submit-button">
+                    Submit Answer
+                </button>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
